@@ -18,22 +18,29 @@
 <body>
 <!--    Barre de navigation-->
 <header>
-    <nav class="navbar navbar-expand-lg fixed-top bg-danger-subtle">
+    <nav class="navbar navbar-expand-lg bg-danger-subtle">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="me-2" src="assets/img/2490819.png" height="75" width="75"/>Eyce's
-                Croissant</a>
+            <a class="navbar-brand" href="#"><img class="me-2" src="assets/img/2490819.png" height="75" width="75"/>
+                Eyce's Croissant</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse collapse navbar-collapse me-auto mb-2 justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#patisserie">Produits</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#equipe">Notre équipe</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#avis">Avis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -41,9 +48,6 @@
     </nav>
 </header>
 <main>
-    <section>
-        <p>1</p>
-    </section>
     <!--Présentation-->
     <section id="presentation">
         <div class="container me-auto mb-2 justify-content-end">
@@ -51,17 +55,100 @@
                 <div class="col col-md-6">
                     <h1 class="p-2 mb-3">Eyce's Croissant</h1>
                     <h3 class="mb-3">Pense différemment, pense croissant</h3>
-                    <p>Nous faisons les meilleurs croissant du monde, certifié par Marie Blachère, notre concurrent
+                    <p>Nous faisons les meilleurs croissants du monde, certifié par Marie Blachère, notre concurrent
                         n°1</p>
                     <a href="#" class="btn btn-outline-danger">Commander Maintenant</a>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
-                    <img src="./assets/img/logo sans fond.png" height="500" width="500"/></div>
+                    <img src="./assets/img/logo sans fond.png" height="500" width="500"/>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-danger-subtle" id="patisserie">
+        <h1 class="fw-bold text-center">Nos produits</h1>
+        <div class="container text-center mb-3 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="mb-4">Croissant</h1>
+                    <h3 class="mb-4">Notre produit vedette et le plus vendu</h3>
+                    <p>Un croissant est une viennoiserie à base d'une pâte levée feuilletée spécifique, la pâte à
+                        croissant, qui comporte de la levure et une proportion importante de beurre.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/img/croissant.jpg" height="328" width="400"/></div>
+            </div>
+        </div>
+        <div class="container text-center mb-3 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/img/chocolatine.jpg" height="328" width="524"/>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="mb-4">Chocolatine</h1>
+                    <h3 class="mb-4">L'incontournable</h3>
+                    <p>La chocolatine est une viennoiserie constituée d'une pâte levée
+                        feuilletée, identique à celle du croissant, rectangulaire et enroulée sur une ou plusieurs
+                        barres de chocolat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mb-3 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="mb-4">Chouquette</h1>
+                    <h3 class="mb-4">Le classique</h3>
+                    <p>Une chouquette est une petite pâtisserie soufflée à base de pâte à choux et de perle de sucre</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/img/chouquette.jpg" height="319" width="400"/></div>
+            </div>
+        </div>
+        <div class="container text-center mb-3 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/img/beignet au chocolat.jpeg" height="278" width="550"/>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="mb-4">Beignet fourré au Chocolat </h1>
+                    <h3 class="mb-4">Le classique</h3>
+                    <p>Une chouquette est une petite pâtisserie soufflée à base de pâte à choux et de perle de sucre</p>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mb-3 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="mb-4">Tropézienne</h1>
+                    <h3 class="mb-4">Un délice</h3>
+                    <p>La tarte tropézienne, ou simplement la Tropézienne, est un gâteau monté à partir d'une brioche au
+                        sucre, fendue en deux au niveau de sa taille, et garnie d'un mélange de deux crèmes, une recette
+                        d'origine familiale du pâtissier polonais Benjamin Markiewicz.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/img/tropezienne.jpg" height="350" width="450"/>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mb-3 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/img/makowiec.jpg" height="300" width="550"/>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="mb-4">Makowiec</h1>
+                    <h3 class="mb-4">Le GOAT Polonais</h3>
+                    <p>
+                        Le makowiec ou makocz est un gâteau polonais constitué d'une pâte à brioche roulée et fourrée à
+                        la pâte de graines de pavot. La pâte de graines de pavot est souvent agrémentée de raisins secs,
+                        de miel et, parfois, de fruits confits.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!--Tarifs-->
-    <section id="tarifs" class="bg-danger-subtle mt-5 mb-5">
+    <section id="equipe" class=" mt-5 ">
         <div class="container text-center mb-3">
             <div class="row">
                 <div class="col-md-6">
@@ -89,6 +176,19 @@
         <div class="container text-center mb-3">
             <div class="row">
                 <div class="col-md-6">
+                    <img src="./assets/img/MARKIEWICZ_Benjamin.jpg" height="315" width="210"/></div>
+                <div class="col-md-6">
+                    <h1>Benjamin Markiewicz</h1>
+                    <h2>Pâtissier Polonais</h2>
+                    <p>Conçoit les meilleures pâtisseries de Pologne depuis 1998 quand il est présent </p>
+                    <p>(Prends beaucoup de RTT)</p>
+                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mb-3">
+            <div class="row">
+                <div class="col-md-6">
                     <img src="./assets/img/photo Maxime.jpg" height="315" width="210"/></div>
                 <div class="col-md-6">
                     <h1>Maxime Sermet</h1>
@@ -105,7 +205,7 @@
                 <div class="col-md-6">
                     <h1>Andy Schiesslé</h1>
                     <h2>Livreur</h2>
-                    <p>Plus rapide qu'une Formule 1, vous serez livrez en temps et en heure</p>
+                    <p>Plus rapide qu'une Formule 1, vous serez livrés en temps et en heure</p>
                     <button class="btn btn-outline-dark">Fiche de poste</button>
                 </div>
             </div>
@@ -113,7 +213,7 @@
         <div class="container text-center mb-3">
             <div class="row">
                 <div class="col-md-6">
-                    </div>
+                </div>
                 <div class="col-md-6">
                     <h1>Antoine Néret</h1>
                     <h2>Caissier</h2>
@@ -125,7 +225,7 @@
         <div class="container text-center mb-3">
             <div class="row">
                 <div class="col-md-6">
-                    </div>
+                </div>
                 <div class="col-md-6">
                     <h1>Hugo Talbot</h1>
                     <h2>Chocolatier</h2>
@@ -136,17 +236,108 @@
         </div>
     </section>
 
-    <!--    contenu-->
-    <section id="contenu">
-
+    <section id="avis" class="bg-danger-subtle">
+        <h1 class="text-center"><i class="bi bi-stars"></i>Avis</h1>
+        <p class="text-center">Ce que pensent nos clients de Eyce's Croissant...</p>
+        <ul class="container list-group">
+            <li class="list-group-item m-0 border-black">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <h2>L'une des meilleures boulangeries que j'ai pu essayer de ma vie</h2>
+                <p class="fs-5">Je suggère cette boulangerie, elle en vaut le détour !</p>
+                <p class="fs-6">Avis de Khang Nguyen le 31/01/2024</p>
+            </li>
+            <li class="list-group-item border-black">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <h2>Qualité incroyable ! A essayer !</h2>
+                <p class="fs-5">A ma grande suprise, tout était bon, le fondant chocolat du beignet était délicieux</p>
+                <p class="fs-6">Avis de Jorel Masgonty le 31/01/2023</p>
+            </li>
+            </li>
+            <li class="list-group-item border-black">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <h2>Un top 3 de mes boulangeries préférées, et surement pas le 3e</h2>
+                <p class="fs-5">Malgré mes exigences, cette boulangerie a su m'épater !</p>
+                <p class="fs-6">Avis de Adrien Bruyère le 31/01/2022</p>
+            </li>
+            </li>
+            <li class="list-group-item border-black">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <h2>Cette boulangerie vaut son titre</h2>
+                <p class="fs-5">J'ai toujours été satisfait par cette boulangerie. Tout ce qui est vendu est toujours
+                    très bon avec la possibilité de prendre un café à emporter. Tous les personnels que j'ai pu voir ont
+                    toujours été très souriants jusqu'à ce jour.</p>
+                <p class="fs-6">Avis de Clément Da Silva le 31/01/2021</p>
+            </li>
+            </li>
+            <li class="list-group-item border-black">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <h2>Irréprochable</h2>
+                <p class="fs-5">Boulangerie et pâtisseries délicieuses ... N'hésitez pas à visiter les lieux et obtenez
+                    de délicieuses pâtisseries pour le petit déjeuner et du bon pain pour le dîner</p>
+                <p class="fs-6">Avis de Teha Valette le 31/01/2024</p>
+            </li>
+            </li>
+        </ul>
     </section>
-    <!--    Avis-->
-    <section id="avis" class="bg-light">
 
-    </section>
-    <!--    Contact-->
     <section id="contact">
+        <h1 class="text-center mb-4">Contactez-nous !</h1>
+        <p class="text-center mb-4 fs-2">Vous avez une question ? Remplissez ce formulaire...</p>
+        <form class="container w-50 mx-auto">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Votre email: </label>
+                <div class="input-group flex-nowrap mb-3">
+                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ex: AntoineLaTaupe@gmail.com">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Votre prénom: </label>
+                <div class="input-group flex-nowrap ">
+                    <span class="input-group-text" id="addon-wrapping2"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" placeholder="ex: Antoine" aria-label="Username" aria-describedby="addon-wrapping">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Quel est le thème de votre question?</label>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping3"><i class="bi bi-chat-left-dots"></i></span>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Contenu de la question</option>
+                        <option value="1">Qualité</option>
+                        <option value="2">Suggestion</option>
+                        <option value="3">Allergène</option>
+                    </select>
+                </div>
+            </div>
 
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Votre question..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-danger">Envoyer</button>
+        </form>
     </section>
 </main>
 <footer>

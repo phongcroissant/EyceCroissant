@@ -43,6 +43,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./pages/connexion.php">Connexion</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -194,6 +197,7 @@
         <div class="container text-center mb-3">
             <div class="row">
                 <div class="col-md-6">
+                    <img src="./assets/img/photo%20Hugo.JPG" height="300" width="210" alt="">
                 </div>
                 <div class="col-md-6">
                     <h1>Hugo Talbot</h1>
@@ -202,6 +206,9 @@
                     <button class="btn btn-outline-dark">Fiche de poste</button>
                 </div>
             </div>
+        </div>
+        <div class="container justify-content-center mx-auto w-50">
+            <img src="./assets/img/Organigramme-removebg-preview.png" alt="">
         </div>
     </section>
 
@@ -261,7 +268,8 @@
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star-fill"></i>
                 <h2>Irréprochable</h2>
-                <p class="fs-5">Boulangerie et pâtisseries délicieuses ... N'hésitez pas à visiter les lieux et obtenez
+                <p class="fs-5">Viennoiseries et pâtisseries délicieuses ... N'hésitez pas à visiter les lieux et
+                    obtenez
                     de délicieuses pâtisseries pour le petit déjeuner et du bon pain pour le dîner</p>
                 <p class="fs-6">Avis de Teha Valette le 31/01/2024</p>
             </li>

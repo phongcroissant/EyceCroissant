@@ -56,7 +56,7 @@
     <section id="presentation">
         <div class="container me-auto mb-2 justify-content-end">
             <div class="row container text-center">
-                <div class="col col-md-6">
+                <div class="col col-md-6 my-auto">
                     <h1 class="p-2 mb-3">Eyce's Croissant</h1>
                     <h3 class="mb-3">Pense différemment, pense croissant</h3>
                     <p>Nous faisons les meilleurs croissants du monde, certifié par Marie Blachère, notre concurrent
@@ -128,7 +128,8 @@
                     <h1>Phong Nguyen</h1>
                     <h2>Fondateur</h2>
                     <p>Fondateur de Eyce's Croissant, la meilleure boulangerie du monde</p>
-                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20NGUYEN%20Phong.pdf"
+                          target="_blank">Fiche de poste</a></p>
                 </div>
             </div>
         </div>
@@ -140,7 +141,8 @@
                     <h1>Léo Mougin</h1>
                     <h2>Co-fondateur</h2>
                     <p>Conçoit les meilleures pâtisseries de France depuis 1998</p>
-                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20MOUGIN%20Léo.pdf"
+                          target="_blank">Fiche de poste</a></p>
                 </div>
             </div>
         </div>
@@ -153,7 +155,9 @@
                     <h2>Pâtissier Polonais</h2>
                     <p>Conçoit les meilleures pâtisseries de Pologne depuis 1998 quand il est présent </p>
                     <p>(Prends beaucoup de RTT)</p>
-                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                    <p><a class="btn btn-outline-dark"
+                          href="./assets/pdf/Fiche%20de%20poste%20MARKIEWICZ%20Benjamin.pdf" target="_blank">Fiche de
+                            poste</a></p>
                 </div>
             </div>
         </div>
@@ -165,7 +169,9 @@
                     <h1>Maxime Sermet</h1>
                     <h2>Pâtissier</h2>
                     <p>Conçoit les meilleures viennoiseries de France depuis 1998</p>
-                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20SERTMET%20Maxime.pdf"
+                          target="_blank">Fiche de poste</a></p>
+
                 </div>
             </div>
         </div>
@@ -177,7 +183,9 @@
                     <h1>Andy Schiesslé</h1>
                     <h2>Livreur</h2>
                     <p>Plus rapide qu'une Formule 1, vous serez livrés en temps et en heure</p>
-                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20SCHIESSLE%20Andy.pdf"
+                          target="_blank">Fiche de poste</a></p>
+
                 </div>
             </div>
         </div>
@@ -190,7 +198,9 @@
                     <h1>Antoine Néret</h1>
                     <h2>Caissier</h2>
                     <p>Maîtrise l'art des chiffres par excellence</p>
-                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20NERET%20Antoine.pdf"
+                          target="_blank">Fiche de poste</a></p>
+
                 </div>
             </div>
         </div>
@@ -203,7 +213,9 @@
                     <h1>Hugo Talbot</h1>
                     <h2>Chocolatier</h2>
                     <p>Encore mieux que Cédric Grolet/Doumbé</p>
-                    <button class="btn btn-outline-dark">Fiche de poste</button>
+                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20TALBOT%20Hugo.pdf"
+                          target="_blank">Fiche de poste</a></p>
+
                 </div>
             </div>
         </div>

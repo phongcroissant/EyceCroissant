@@ -33,18 +33,7 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <div class="col-md-12 col-lg-4 col-xl-3 mb-3">
-            <form>
-                <h5>S'incrire à notre newsletter</h5>
-                <p>Soyez les premiers aux courants de nos nouveaux produits</p>
-                <div class="flex-column flex-sm-row w-50 gap-2 ">
-                    <label for="newsletter1" class="visually-hidden">Email</label>
-                    <input id="newsletter1" type="text" class="form-control just"
-                           placeholder="AntoineLaTaupe@gmail.com">
-                    <button class="btn btn-primary mt-3" type="button">S'inscrire</button>
-                </div>
-            </form>
-        </div>
+        
     </div>
 
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-5 border-top border-black">

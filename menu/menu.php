@@ -7,7 +7,8 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-danger-subtle">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="me-2" src="../assets/img/2490819.png" height="75" width="75"/>
+            <a class="navbar-brand" href="/index.php"><img class="me-2" src="/assets/img/2490819.png" height="75"
+                                                           width="75"/>
                 Eyce's Croissant</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -18,7 +19,20 @@
                  id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.php">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="/index.php">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../pages/equipe.php">Notre équipe</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/avis.php">Avis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../pages/contact.php">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../pages/connexion.php">Connexion</a>
                     </li>
                 </ul>
             </div>

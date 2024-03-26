@@ -16,42 +16,8 @@
     <title>Eyce's Croissant</title>
 </head>
 <body>
-<!--    Barre de navigation-->
-<header>
-    <nav class="navbar navbar-expand-lg bg-danger-subtle">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img class="me-2" src="assets/img/2490819.png" height="75" width="75"/>
-                Eyce's Croissant</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse collapse navbar-collapse me-auto mb-2 justify-content-end"
-                 id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#patisserie">Produits</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#equipe">Notre équipe</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#avis">Avis</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./pages/connexion.php">Connexion</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
 <main>
+    <?php include_once("./menu/menu.php") ?>
     <!--Présentation-->
     <section id="presentation">
         <div class="container me-auto mb-2 justify-content-end">
@@ -61,7 +27,6 @@
                     <h3 class="mb-3">Pense différemment, pense croissant</h3>
                     <p>Nous faisons les meilleurs croissants du monde, certifié par Marie Blachère, notre concurrent
                         n°1</p>
-                    <a href="#" class="btn btn-outline-danger">Commander Maintenant</a>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <img src="./assets/img/logo sans fond.png" height="500" width="500"/>
@@ -69,7 +34,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-danger-subtle" id="patisserie">
+    <section class="bg-light-subtle" id="patisserie">
         <div id="myCarousel" class="carousel slide container" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class=""
@@ -117,219 +82,6 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </section>
-
-    <section id="equipe" class=" mt-5 ">
-        <div class="container text-center mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./assets/img/photo Phong.jpg" height="315" width="210"/></div>
-                <div class="col-md-6">
-                    <h1>Phong Nguyen</h1>
-                    <h2>Fondateur</h2>
-                    <p>Fondateur de Eyce's Croissant, la meilleure boulangerie du monde</p>
-                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20NGUYEN%20Phong.pdf"
-                          target="_blank">Fiche de poste</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./assets/img/photo Léo.jpg" height="315" width="210"/></div>
-                <div class="col-md-6">
-                    <h1>Léo Mougin</h1>
-                    <h2>Co-fondateur</h2>
-                    <p>Conçoit les meilleures pâtisseries de France depuis 1998</p>
-                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20MOUGIN%20Léo.pdf"
-                          target="_blank">Fiche de poste</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./assets/img/MARKIEWICZ_Benjamin.jpg" height="315" width="210"/></div>
-                <div class="col-md-6">
-                    <h1>Benjamin Markiewicz</h1>
-                    <h2>Pâtissier Polonais</h2>
-                    <p>Conçoit les meilleures pâtisseries de Pologne depuis 1998 quand il est présent </p>
-                    <p>(Prends beaucoup de RTT)</p>
-                    <p><a class="btn btn-outline-dark"
-                          href="./assets/pdf/Fiche%20de%20poste%20MARKIEWICZ%20Benjamin.pdf" target="_blank">Fiche de
-                            poste</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./assets/img/photo Maxime.jpg" height="315" width="210"/></div>
-                <div class="col-md-6">
-                    <h1>Maxime Sermet</h1>
-                    <h2>Pâtissier</h2>
-                    <p>Conçoit les meilleures viennoiseries de France depuis 1998</p>
-                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20SERTMET%20Maxime.pdf"
-                          target="_blank">Fiche de poste</a></p>
-
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./assets/img/photo Andy.jpg" height="315" width="210"/></div>
-                <div class="col-md-6">
-                    <h1>Andy Schiesslé</h1>
-                    <h2>Livreur</h2>
-                    <p>Plus rapide qu'une Formule 1, vous serez livrés en temps et en heure</p>
-                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20SCHIESSLE%20Andy.pdf"
-                          target="_blank">Fiche de poste</a></p>
-
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="assets/img/photo Antoine.jpg" height="300" width="210"/>
-                </div>
-                <div class="col-md-6">
-                    <h1>Antoine Néret</h1>
-                    <h2>Caissier</h2>
-                    <p>Maîtrise l'art des chiffres par excellence</p>
-                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20NERET%20Antoine.pdf"
-                          target="_blank">Fiche de poste</a></p>
-
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./assets/img/photo%20Hugo.JPG" height="300" width="210" alt="">
-                </div>
-                <div class="col-md-6">
-                    <h1>Hugo Talbot</h1>
-                    <h2>Chocolatier</h2>
-                    <p>Encore mieux que Cédric Grolet/Doumbé</p>
-                    <p><a class="btn btn-outline-dark" href="./assets/pdf/Fiche%20de%20poste%20TALBOT%20Hugo.pdf"
-                          target="_blank">Fiche de poste</a></p>
-
-                </div>
-            </div>
-        </div>
-        <div class="container justify-content-center mx-auto w-50">
-            <img src="./assets/img/Organigramme-removebg-preview.png" alt="">
-        </div>
-    </section>
-
-    <section id="avis" class="bg-danger-subtle">
-        <h1 class="text-center"><i class="bi bi-stars"></i>Avis</h1>
-        <p class="text-center">Ce que pensent nos clients de Eyce's Croissant...</p>
-        <ul class="container list-group">
-            <li class="list-group-item m-0 border-black">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <h2>L'une des meilleures boulangeries que j'ai pu essayer de ma vie</h2>
-                <p class="fs-5">Je suggère cette boulangerie, elle en vaut le détour !</p>
-                <p class="fs-6">Avis de Khang Nguyen le 31/01/2024</p>
-            </li>
-            <li class="list-group-item border-black">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <h2>Qualité incroyable ! A essayer !</h2>
-                <p class="fs-5">A ma grande suprise, tout était bon, le fondant chocolat du beignet était délicieux</p>
-                <p class="fs-6">Avis de Jorel Masgonty le 31/01/2023</p>
-            </li>
-            </li>
-            <li class="list-group-item border-black">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star"></i>
-                <h2>Un top 3 de mes boulangeries préférées, et surement pas le 3e</h2>
-                <p class="fs-5">Malgré mes exigences, cette boulangerie a su m'épater !</p>
-                <p class="fs-6">Avis de Adrien Bruyère le 31/01/2022</p>
-            </li>
-            </li>
-            <li class="list-group-item border-black">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <h2>Cette boulangerie vaut son titre</h2>
-                <p class="fs-5">J'ai toujours été satisfait par cette boulangerie. Tout ce qui est vendu est toujours
-                    très bon avec la possibilité de prendre un café à emporter. Tous les personnels que j'ai pu voir ont
-                    toujours été très souriants jusqu'à ce jour.</p>
-                <p class="fs-6">Avis de Clément Da Silva le 31/01/2021</p>
-            </li>
-            </li>
-            <li class="list-group-item border-black">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <h2>Irréprochable</h2>
-                <p class="fs-5">Viennoiseries et pâtisseries délicieuses ... N'hésitez pas à visiter les lieux et
-                    obtenez
-                    de délicieuses pâtisseries pour le petit déjeuner et du bon pain pour le dîner</p>
-                <p class="fs-6">Avis de Teha Valette le 31/01/2024</p>
-            </li>
-            </li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h1 class="text-center mb-4">Contactez-nous !</h1>
-        <p class="text-center mb-4 fs-2">Vous avez une question ? Remplissez ce formulaire...</p>
-        <form class="container w-50 mx-auto">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Votre email: </label>
-                <div class="input-group flex-nowrap mb-3">
-                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                           placeholder="ex: AntoineLaTaupe@gmail.com">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Votre prénom: </label>
-                <div class="input-group flex-nowrap ">
-                    <span class="input-group-text" id="addon-wrapping2"><i class="bi bi-person-fill"></i></span>
-                    <input type="text" class="form-control" placeholder="ex: Antoine" aria-label="Username"
-                           aria-describedby="addon-wrapping">
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Quel est le thème de votre question?</label>
-                <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping3"><i class="bi bi-chat-left-dots"></i></span>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Contenu de la question</option>
-                        <option value="1">Qualité</option>
-                        <option value="2">Suggestion</option>
-                        <option value="3">Allergène</option>
-                    </select>
-                </div>
-            </div>
-
-
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                          placeholder="Votre question..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-outline-danger">Envoyer</button>
-        </form>
     </section>
     <?php include_once("./menu/pied-page.php") ?>
 </main>

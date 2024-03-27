@@ -32,6 +32,9 @@
                         <a class="nav-link active" aria-current="page" href="../pages/contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../pages/inscription.php">Inscription</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../pages/connexion.php">Connexion</a>
                     </li>
                 </ul>

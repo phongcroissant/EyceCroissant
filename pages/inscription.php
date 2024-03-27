@@ -115,6 +115,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
 
             <button type="submit" class="btn btn-primary">Valider</button>
+            <a href="connexion.php" class="nav-item mb-2 nav-link p-0 mt-3 mx-auto">Vous avez déjà un compte ?
+                Connectez-vous !</a>
         </form>
     </div>
 </section>

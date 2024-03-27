@@ -23,7 +23,7 @@
                             <li><a class="dropdown-item" href="../pages/connexion.php">Connexion</a></li>
                         </ul>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index.php">Produits</a>
+                        <a class="nav-link active" aria-current="page" href="/index.php">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../pages/equipe.php">Notre équipe</a>

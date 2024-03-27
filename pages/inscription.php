@@ -53,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>Pâtisserie | Eyce's Croissant</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
 </head>
 <body>
@@ -62,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="container justify-content-center">
             <h1 class="text-center mt-5">Inscription</h1>
         </div>
-        <form action="" method="post" class=" mx-auto w-50 p-5" novalidate>
+        <form action="" method="post" class=" mx-auto w-50 p-5 shadow mb-5" novalidate>
             <div class="mb-3">
                 <label for="nom" class="form-label">Nom *</label>
                 <input type="text"
@@ -121,7 +122,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 </section>
 <?php include_once("../menu/pied-page.php") ?>
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

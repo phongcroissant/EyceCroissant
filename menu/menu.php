@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Menu</title>
-</head>
 <header>
     <nav class="navbar navbar-expand-lg bg-danger-subtle">
         <div class="container-fluid">
@@ -18,24 +12,29 @@
             <div class="collapse navbar-collapse collapse navbar-collapse me-auto mb-2 justify-content-end"
                  id="navbarSupportedContent">
                 <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
+                            Compte
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../pages/inscription.php">Inscription</a></li>
+                            <li><a class="dropdown-item" href="../pages/connexion.php">Connexion</a></li>
+                        </ul>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/index.php">Produits</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../pages/equipe.php">Notre équipe</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../pages/avis.php">Avis</a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="../pages/contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../pages/inscription.php">Inscription</a>
+                        <a class="nav-link" href="../pages/avis.php">Avis</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../pages/connexion.php">Connexion</a>
+
                     </li>
                 </ul>
             </div>

@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pâtisserie | Eyce's Croissant</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
 </head>
 <body>
@@ -43,5 +44,6 @@
         </div>
 </section>
 <?php include_once("../menu/pied-page.php") ?>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

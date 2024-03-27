@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         section {
             padding: 60px 0;
@@ -16,8 +17,8 @@
     <title>Eyce's Croissant</title>
 </head>
 <body>
+<?php include_once("./menu/menu.php") ?>
 <main>
-    <?php include_once("./menu/menu.php") ?>
     <!--Présentation-->
     <section id="presentation">
         <div class="container me-auto mb-2 justify-content-end">
@@ -83,9 +84,7 @@
             </button>
         </div>
     </section>
-    <?php include_once("./menu/pied-page.php") ?>
 </main>
-
-<script src="assets/js/bootstrap.bundle.min.js"></script>
+<?php include_once("./menu/pied-page.php") ?>
 </body>
 </html>

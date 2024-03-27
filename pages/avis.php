@@ -32,8 +32,8 @@
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
-            <h2>Qualité incroyable ! A essayer !</h2>
-            <p class="fs-5">A ma grande suprise, tout était bon, le fondant chocolat du beignet était délicieux</p>
+            <h2>Qualité incroyable ! À essayer !</h2>
+            <p class="fs-5">À ma grande suprise, tout était bon, le fondant chocolat du beignet était délicieux</p>
             <p class="fs-6">Avis de Jorel Masgonty le 31/01/2023</p>
         </li>
         </li>
@@ -43,7 +43,7 @@
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star"></i>
-            <h2>Un top 3 de mes boulangeries préférées, et surement pas le 3e</h2>
+            <h2>Un top 3 de mes boulangeries préférées, et sûrement pas le 3e</h2>
             <p class="fs-5">Malgré mes exigences, cette boulangerie a su m'épater !</p>
             <p class="fs-6">Avis de Adrien Bruyère le 31/01/2022</p>
         </li>

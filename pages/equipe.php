@@ -48,7 +48,7 @@
                 <h1>Benjamin Markiewicz</h1>
                 <h2>Pâtissier Polonais</h2>
                 <p>Conçoit les meilleures pâtisseries de Pologne depuis 1998 quand il est présent </p>
-                <p>(Prends beaucoup de RTT)</p>
+                <p>(Prend beaucoup de RTT)</p>
                 <p><a class="btn btn-outline-dark"
                       href="../assets/pdf/Fiche%20de%20poste%20MARKIEWICZ%20Benjamin.pdf" target="_blank">Fiche de
                         poste</a></p>

@@ -20,11 +20,11 @@
         <div class="col-md-12 col-lg-4 col-xl-3 mb-3 mx-auto">
             <h5>Contact</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">5 avenue du parc</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">25000 Besançon</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">France</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">08 85 25 68 41</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">eycecroissant@contact.fr</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0 text-muted">5 avenue du parc</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0 text-muted">25000 Besançon</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0 text-muted">France</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0 text-muted">08 85 25 68 41</a></li>
+                <li class="nav-item mb-2"><a class="nav-link p-0 text-muted">eycecroissant@contact.fr</a></li>
             </ul>
         </div>
         <div class="col-md-12 col-lg-4 col-xl-3 mb-3 mx-auto">
@@ -33,7 +33,7 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        
+
     </div>
 
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-5 border-top border-black">

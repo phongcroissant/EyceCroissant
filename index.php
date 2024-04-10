@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -28,6 +31,7 @@
                     <h3 class="mb-3">Pense différemment, pense croissant</h3>
                     <p>Nous faisons les meilleurs croissants du monde, certifié par Marie Blachère, notre concurrent
                         n°1</p>
+                    <p>Disponible également sur UberEat, Delivroo et ToGoodToGo</p>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
                     <img src="./assets/img/logo sans fond.png" height="500" width="500"/>
@@ -47,7 +51,7 @@
             </div>
             <div class="carousel-inner container">
                 <div class="carousel-item container">
-                    <img src="./assets/img/baguette.jpg" height=100% width=100% alt="">
+                    <img src="./assets/img/baguettecarrousel.jpg" height=100% width=100% alt="">
                     <div class="container">
                         <div class="carousel-caption text-start">
 

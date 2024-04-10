@@ -1,12 +1,15 @@
 <?php
+session_start();
 // Déterminer si le formulaire a été soumis
 // Utilisation d'une variable superglobale $_SERVER
 // $_SERVER : tableau associatif contenant des informations sur la requête HTTP
 $erreurs = [];
 $prenom = "";
 $nom = "";
+$pseudo = "";
 $email = "";
 $password = "";
+$confirmPassword = "";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Le formulaire a été soumis !
     // Traiter les données du formulaire
@@ -15,7 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
     $email = $_POST['email'];
+    $pseudo = $_POST['pseudo'];
     $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmpassword'];
 
     // Validation des données
     if (empty($prenom)) {
@@ -24,11 +29,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($nom)) {
         $erreurs["nom"] = "Veuillez entrer un nom";
     }
+    if (empty($pseudo)) {
+        $erreurs["pseudo"] = "Veuillez saisir un pseudo";
+    }
     if (empty($email)) {
         $erreurs["email"] = "Veuillez entrer une adresse mail";
     }
-    if (empty($email)) {
+    if (empty($password)) {
         $erreurs["password"] = "Veuillez entrer un mot de passe";
+    }
+    if ($password != $confirmPassword) {
+        $erreurs["confirmpassword"] = "Veuillez saisir le même mot de passe";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erreurs["email"] = "Veuillez entrer une adresse mail valide";
     }
@@ -89,6 +100,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <?php endif; ?>
             </div>
             <div class="mb-3">
+                <label for="pseudo" class="form-label">Pseudo *</label>
+                <input type="text"
+                       class="form-control <?= (isset($erreurs["pseudo"])) ? "border border-2 border-danger" : "" ?>"
+                       name="pseudo"
+                       id="pseudo"
+                       value="<?= $pseudo ?>"
+                       placeholder="Antoine">
+                <?php if (isset($erreurs["pseudo"])): ?>
+                    <p class="form-text text-danger"><?= $erreurs["pseudo"] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
                 <label for="Email" class="form-label">Email *</label>
                 <input type="email"
                        class="form-control <?= (isset($erreurs["email"])) ? "border border-2 border-danger" : "" ?>"
@@ -112,6 +135,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                        placeholder="Password">
                 <?php if (isset($erreurs["password"])): ?>
                     <p class="form-text text-danger"><?= $erreurs["password"] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="confirmpassword" class="form-label">Confirmation mot de passe *</label>
+                <input type="password"
+                       class="form-control <?= (isset($erreurs["confirmpassword"])) ? "border border-2 border-danger" : "" ?>"
+                       name="confirmpassword"
+                       id="confirmpassword"
+                       value="<?= $confirmPassword ?>"
+                       placeholder="Confirmer votre mot de passe">
+                <?php if (isset($erreurs["confirmpassword"])): ?>
+                    <p class="form-text text-danger"><?= $erreurs["confirmpassword"] ?></p>
                 <?php endif; ?>
             </div>
 

@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once("../database/db-config.php");
+require_once("../database/db-produit.php");
+$produits = getPatisserie();
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -15,47 +21,30 @@
 <?php include_once("../menu/menu.php") ?>
 <section>
     <div class="container text-center mb-3 mt-5">
-        <div class="container text-center mb-3 mt-5">
-            <div class="row">
-                <div class="col-md-12 col-xl-6">
-                    <img src="../assets/img/beignet au chocolat.jpeg" height="278" width="550"/>
+        <div class="row">
+            <?php foreach ($produits as $produit): ?>
+                <div class="container text-center">
+                    <div class="row mb-5">
+                        <div class="col col-xl-6">
+                            <img src="<?= $produit["photo"] ?>" alt="">
+                        </div>
+                        <div class="col col-xl-6">
+                            <h1 class="mb-3">
+                                <?= $produit["designation"] ?>
+                            </h1>
+                            <h2 class="mb-3">
+                                <?= $produit["sous_designation"] ?>
+                            </h2>
+                            <p class="mb-3">
+                                <?= $produit["commentaire"] ?>
+                            </p>
+                            <p class="mb-3">
+                                Prix : <?= $produit["prix"] ?> €
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-12 col-xl-6">
-                    <h1 class="mb-4">Beignet fourré au Chocolat </h1>
-                    <h3 class="mb-4">Le classique</h3>
-                    <p>Une chouquette est une petite pâtisserie soufflée à base de pâte à choux et de perle de sucre</p>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3 mt-5">
-            <div class="row">
-                <div class="col-md-12 col-xl-6">
-                    <h1 class="mb-4">Tropézienne</h1>
-                    <h3 class="mb-4">Un délice</h3>
-                    <p>La tarte tropézienne, ou simplement la Tropézienne, est un gâteau monté à partir d'une brioche au
-                        sucre, fendue en deux au niveau de sa taille, et garnie d'un mélange de deux crèmes, une recette
-                        d'origine familiale du pâtissier polonais Benjamin Markiewicz.</p>
-                </div>
-                <div class="col-md-12 col-xl-6">
-                    <img src="../assets/img/tropezienne.jpg" height="350" width="450"/>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center mb-3 mt-5">
-            <div class="row">
-                <div class="col-md-12  col-xl-6">
-                    <img src="../assets/img/makowiec.jpg" height="300" width="550"/>
-                </div>
-                <div class="col-md-12 col-xl-6">
-                    <h1 class="mb-4">Makowiec</h1>
-                    <h3 class="mb-4">Le GOAT Polonais</h3>
-                    <p>
-                        Le makowiec ou makocz est un gâteau polonais constitué d'une pâte à brioche roulée et fourrée à
-                        la pâte de graines de pavot. La pâte de graines de pavot est souvent agrémentée de raisins secs,
-                        de miel et, parfois, de fruits confits.
-                    </p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
 </section>
 <?php include_once("../menu/pied-page.php") ?>

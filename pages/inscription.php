@@ -1,4 +1,5 @@
 <?php
+require_once("../database/db-client.php");
 session_start();
 // Déterminer si le formulaire a été soumis
 // Utilisation d'une variable superglobale $_SERVER
@@ -7,6 +8,9 @@ $erreurs = [];
 $prenom = "";
 $nom = "";
 $pseudo = "";
+$adresse = "";
+$codePostal = "";
+$villeAdresse = "";
 $email = "";
 $password = "";
 $confirmPassword = "";
@@ -18,6 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $prenom = $_POST['prenom'];
     $nom = $_POST['nom'];
     $email = $_POST['email'];
+    $adresse = $_POST['adresse'];
+    $codePostal = $_POST['codepostal'];
+    $villeAdresse = $_POST['villeadresse'];
     $pseudo = $_POST['pseudo'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirmpassword'];
@@ -35,6 +42,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($email)) {
         $erreurs["email"] = "Veuillez entrer une adresse mail";
     }
+    if (empty($adresse)) {
+        $erreurs["adresse"] = "Veuillez entrer une adresse";
+    }
+    if (empty($codePostal)) {
+        $erreurs["codepostal"] = "Veuillez entrer un code postal";
+    }
+    if (strlen($codePostal) != 5) {
+        $erreurs["codepostal"] = "Veuillez entrer un code postal valide";
+    }
+    if (empty($villeAdresse)) {
+        $erreurs["villeadresse"] = "Veuillez entrer une ville";
+    }
     if (empty($password)) {
         $erreurs["password"] = "Veuillez entrer un mot de passe";
     }
@@ -47,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Traiter les données
     if (empty($erreurs)) {
         // Traitement des données (insertion dans une base de données)
+        createAccount($nom, $prenom, $pseudo, $email, $adresse, $codePostal, $villeAdresse, $password);
         // Rediriger l'utisateur vers une autre page du site
         header("Location: ../index.php");
         exit();
@@ -118,12 +138,48 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                        name="email"
                        id="Email"
                        value="<?= $email ?>"
-                       placeholder="AntoineLaTaupe@gmail.com"
-                       aria-describedby="emailHelp">
+                       placeholder="AntoineLaTaupe@gmail.com">
                 <?php if (isset($erreurs["email"])): ?>
                     <p class="form-text text-danger"><?= $erreurs["email"] ?></p>
                 <?php endif; ?>
                 <div id="emailHelp" class="form-text">Nous ne divulgurons jamais votre adresse email</div>
+            </div>
+            <div class="mb-3">
+                <label for="adresse" class="form-label">Adresse *</label>
+                <input type="text"
+                       class="form-control <?= (isset($erreurs["adresse"])) ? "border border-2 border-danger" : "" ?>"
+                       name="adresse"
+                       id="adresse"
+                       value="<?= $adresse ?>"
+                       placeholder="Antoine">
+                <?php if (isset($erreurs["adresse"])): ?>
+                    <p class="form-text text-danger"><?= $erreurs["adresse"] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="codepostal" class="form-label">Code postal *</label>
+                <input type="number"
+                       class="form-control <?= (isset($erreurs["codepostal"])) ? "border border-2 border-danger" : "" ?>"
+                       name="codepostal"
+                       id="codepostal"
+                       max="99999"
+                       value="<?= $codePostal ?>"
+                       placeholder="25000">
+                <?php if (isset($erreurs["codepostal"])): ?>
+                    <p class="form-text text-danger"><?= $erreurs["codepostal"] ?></p>
+                <?php endif; ?>
+            </div>
+            <div class="mb-3">
+                <label for="villeadresse" class="form-label">Ville *</label>
+                <input type="text"
+                       class="form-control <?= (isset($erreurs["villeadresse"])) ? "border border-2 border-danger" : "" ?>"
+                       name="villeadresse"
+                       id="villeadresse"
+                       value="<?= $villeAdresse ?>"
+                       placeholder="Antoine">
+                <?php if (isset($erreurs["villeadresse"])): ?>
+                    <p class="form-text text-danger"><?= $erreurs["villeadresse"] ?></p>
+                <?php endif; ?>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Mot de passe *</label>

@@ -59,6 +59,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     if ($password != $confirmPassword) {
         $erreurs["confirmpassword"] = "Veuillez saisir le même mot de passe";
+    }
+    if (verifierSiMailExiste($email)) {
+        $erreurs["email"] = "Cette adresse email a déjà été utilisée";
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $erreurs["email"] = "Veuillez entrer une adresse mail valide";
     }

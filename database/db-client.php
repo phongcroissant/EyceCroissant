@@ -21,3 +21,25 @@ VALUES (?,?,?,?,?,?,?,?)");
 
     $requete->execute();
 }
+
+function verifierSiMailExiste($email)
+{
+    $pdo = getConnexion();
+    $stmt = $pdo->prepare('SELECT count(*)
+            FROM `client`
+            WHERE mail = :email');
+    $stmt->bindValue(':email', $email);
+    $stmt->execute();
+    $result = (int)$stmt->fetchColumn();
+    return $result;
+}
+
+function getAccount(): ?array
+{
+    $pdo = getConnexion();
+    $requete = $pdo->prepare("SELECT * FROM client");
+    $requete->execute();
+    $account = $requete->fetchAll(PDO::FETCH_ASSOC);
+
+    return $account ?: null;
+}

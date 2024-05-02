@@ -1,5 +1,10 @@
 <?php
 session_start();
+$pseudo = null;
+if (isset($_SESSION["utilisateur"])) {
+    $pseudo = $_SESSION["utilisateur"]["pseudo_client"];
+}
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -21,6 +26,7 @@ session_start();
 </head>
 <body>
 <?php include_once("./menu/menu.php") ?>
+
 <main>
     <!--Présentation-->
     <section id="presentation">
@@ -28,7 +34,7 @@ session_start();
             <div class="row container text-center">
                 <div class="col col-md-6 my-auto">
                     <h1 class="p-2 mb-3">Eyce's Croissant</h1>
-                    <h3 class="mb-3">Pense différemment, pense croissant</h3>
+                    <h3 class="mb-3">Pensez différemment, pensez croissant</h3>
                     <p>Nous faisons les meilleurs croissants du monde, certifié par Marie Blachère, notre concurrent
                         n°1</p>
                     <p>Disponible également sur UberEat, Delivroo et ToGoodToGo</p>

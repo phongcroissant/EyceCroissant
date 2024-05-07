@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <?php if (isset($erreurs["email"])): ?>
                     <p class="form-text text-danger"><?= $erreurs["email"] ?></p>
                 <?php endif; ?>
-                <div id="emailHelp" class="form-text">Nous ne divulgurons jamais votre adresse email</div>
+                <div id="emailHelp" class="form-text">Nous ne divulguerons jamais votre adresse email</div>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Mot de passe *</label>

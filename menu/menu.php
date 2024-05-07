@@ -31,6 +31,10 @@ if (isset($_SESSION["utilisateur"])) {
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/avis.php">Avis</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/avis.php">0 <i class="bi bi-cart"></i></a>
+
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
@@ -38,7 +42,7 @@ if (isset($_SESSION["utilisateur"])) {
                                 <?= $pseudo ?>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../pages/inscription.php">Se déconnecter</a></li>
+                                <li><a class="dropdown-item" href="../pages/logout.php">Se déconnecter</a></li>
                             </ul>
                         </li>
 
@@ -64,7 +68,6 @@ if (isset($_SESSION["utilisateur"])) {
     </nav>
 </header>
 <body>
-
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

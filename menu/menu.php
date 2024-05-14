@@ -32,8 +32,7 @@ if (isset($_SESSION["utilisateur"])) {
                             <a class="nav-link" href="../pages/avis.php">Avis</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../pages/avis.php">0 <i class="bi bi-cart"></i></a>
-
+                            <a class="nav-link" href="../pages/panier.php">0 <i class="bi bi-cart"></i></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

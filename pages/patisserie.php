@@ -16,8 +16,6 @@ $produits = getPatisserie();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
-    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js”></script>
-    <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js”></script>
 </head>
 <body>
 <?php include_once("../menu/menu.php") ?>
@@ -43,10 +41,15 @@ $produits = getPatisserie();
                             <p class="mb-3">
                                 Prix : <?= $produit["prix"] ?> €
                             </p>
+                            <p>
+                                <a class="btn btn-lg btn-light fs-6"
+                                   href="../pages/addpanier.php?id_produit=<?= $produit["id_produit"] ?>">Ajouter au
+                                    panier</a>
+                            </p>
                         </div>
                     </div>
                 </div>
-            
+
             <?php endforeach; ?>
         </div>
 </section>

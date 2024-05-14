@@ -36,3 +36,11 @@ WHERE type_produit = 'Baguette'
 
     return $requete->FetchAll();
 }
+
+function getProduit($idProduit): array
+{
+    $pdo = getConnexion();
+    $requete = $pdo->query("SELECT * FROM produit WHERE id_produit=$idProduit");
+    return $requete->FetchAll(PDO::FETCH_ASSOC);
+
+}

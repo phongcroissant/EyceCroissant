@@ -2,7 +2,31 @@
 session_start();
 require_once("../database/db-config.php");
 require_once("../database/db-produit.php");
-$commandes = [];
+require_once("../database/db-client.php");
+require_once("../database/db-acheter.php");
+require_once("../fonction/fonction.php");
+$pseudo = null;
+$idClient = null;
+if (isset($_SESSION["utilisateur"])) {
+    $pseudo = $_SESSION["utilisateur"]["pseudo_client"];
+    $idClient = $_SESSION["utilisateur"]["id_client"];
+}
+$commandes = [
+    "designation" => "",
+    "quantite" => "",
+    "prix" => ""
+];
+$paniers = getPanierFromId($idClient);
+foreach ($paniers as $panier) {
+    $getProduitFromId = getProduitFromId($panier["id_produit"]);
+    foreach ($getProduitFromId as $produit) {
+        $nomProduit = $produit["designation"];
+        $prix = $produit["prix"];
+    }
+}
+echo '<pre>';
+var_dump($getProduitFromId);
+echo '</pre>';
 ?>
 <!doctype html>
 <html lang="fr">
@@ -38,21 +62,24 @@ $commandes = [];
                 </div>
             </div>
         </div>
+
         <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    Produit
+            <?php foreach ($paniers as $panier): ?>
+                <div class="row">
+                    <div class="col">
+                        Croissant
+                    </div>
+                    <div class="col">
+                        <?= $panier["quantite"] ?>
+                    </div>
+                    <div class="col">
+                        <?= $prix ?>
+                    </div>
+                    <div class="col">
+                        Supprimer
+                    </div>
                 </div>
-                <div class="col">
-                    Quantité
-                </div>
-                <div class="col">
-                    Prix
-                </div>
-                <div class="col">
-                    Action
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

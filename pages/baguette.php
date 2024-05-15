@@ -16,44 +16,43 @@ $produits = getBaguette();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
-    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js”></script>
-    <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js”></script>
 </head>
 <body>
 <?php include_once("../menu/menu.php") ?>
 <section>
     <div class="container text-center mb-3 mt-5">
-        <?php foreach ($produits as $produit): ?>
-            <div class="container text-center">
-                <div class="row mb-5">
-                    <div class="col col-xl-6">
-                        <img src="<?= $produit["photo"] ?>" alt="">
-                    </div>
-                    <div class="col col-xl-6 my-auto">
-                        <h1 class="mb-3">
-                            <?= $produit["designation"] ?>
-                        </h1>
-                        <h2 class="mb-3">
-                            <?= $produit["sous_designation"] ?>
-                        </h2>
-                        <p class="mb-3">
-                            <?= $produit["commentaire"] ?>
-                        </p>
-                        <p class="mb-3">
-                            Prix : <?= $produit["prix"] ?> €
-                        </p>
-                        <p>
-                            <a class="btn btn-lg btn-light fs-6"
-                               href="../pages/addpanier.php?=<?= $produit["id_produit"] ?>">Ajouter au
-                                panier</a>
-                        </p>
+        <div class="row">
+            <?php foreach ($produits as $produit): ?>
+                <div class="container text-center">
+                    <div class="row mb-5">
+                        <div class="col col-xl-6">
+                            <img src="<?= $produit["photo"] ?>" alt="">
+                        </div>
+                        <div class="col col-xl-6">
+                            <h1 class="mb-3">
+                                <?= $produit["designation"] ?>
+                            </h1>
+                            <h2 class="mb-3">
+                                <?= $produit["sous_designation"] ?>
+                            </h2>
+                            <p class="mb-3">
+                                <?= $produit["commentaire"] ?>
+                            </p>
+                            <p class="mb-3">
+                                Prix : <?= $produit["prix"] ?> €
+                            </p>
+                            <p>
+                                <a class="btn btn-lg btn-light fs-6"
+                                   href="../pages/addpanier.php?id_produit=<?= $produit["id_produit"] ?>">Ajouter au
+                                    panier</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
+
+            <?php endforeach; ?>
+        </div>
 </section>
 <?php include_once("../menu/pied-page.php") ?>
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -4,22 +4,22 @@ require_once("../database/db-config.php");
 require_once("../database/db-produit.php");
 $produits = getViennoiserie();
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Viennoiserie | Eyce's Croissant</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pâtisserie | Eyce's Croissant</title>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js”></script>
-    <script src=”https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js”></script>
+    <link rel="stylesheet" href="https://bootswatch.com/5/united/bootstrap.min.css">
 </head>
-<?php include_once("../menu/menu.php") ?>
 <body>
+<?php include_once("../menu/menu.php") ?>
 <section>
-    <h1 class="text-center fw-bold mt-5 mb-5">Nos viennoiseries</h1>
     <div class="container text-center mb-3 mt-5">
         <div class="row">
             <?php foreach ($produits as $produit): ?>
@@ -28,7 +28,7 @@ $produits = getViennoiserie();
                         <div class="col col-xl-6">
                             <img src="<?= $produit["photo"] ?>" alt="">
                         </div>
-                        <div class="col col-xl-6 my-auto">
+                        <div class="col col-xl-6">
                             <h1 class="mb-3">
                                 <?= $produit["designation"] ?>
                             </h1>
@@ -43,12 +43,13 @@ $produits = getViennoiserie();
                             </p>
                             <p>
                                 <a class="btn btn-lg btn-light fs-6"
-                                   href="../pages/addpanier.php?=<?= $produit["id_produit"] ?>">Ajouter au
+                                   href="../pages/addpanier.php?id_produit=<?= $produit["id_produit"] ?>">Ajouter au
                                     panier</a>
                             </p>
                         </div>
                     </div>
                 </div>
+
             <?php endforeach; ?>
         </div>
 </section>

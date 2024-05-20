@@ -30,3 +30,10 @@ function getProduitFromId($idProduit): array
 
     return $comptes;
 }
+function supprimerProduitDuPanier($idClient, $idProduit) {
+    $pdo = getConnexion();
+    $requete =  $pdo->prepare("DELETE FROM panier WHERE id_client = ? AND id_produit = ?");
+    $requete->bind_param("ii", $idClient, $idProduit);
+    $requete->execute();
+    $requete->close();
+}

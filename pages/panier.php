@@ -5,35 +5,25 @@ require_once("../database/db-produit.php");
 require_once("../database/db-client.php");
 require_once("../database/db-acheter.php");
 require_once("../fonction/fonction.php");
+
 $pseudo = null;
 $idClient = null;
 if (isset($_SESSION["utilisateur"])) {
     $pseudo = $_SESSION["utilisateur"]["pseudo_client"];
     $idClient = $_SESSION["utilisateur"]["id_client"];
 }
-$commandes = [
-    "designation" => "",
-    "quantite" => "",
-    "prix" => ""
-];
-$paniers = getPanierFromId($idClient);
-foreach ($paniers as $panier) {
-    $getProduitFromId = getProduitFromId($panier["id_produit"]);
-    foreach ($getProduitFromId as $produit) {
-        $nomProduit = $produit["designation"];
-        $prix = $produit["prix"];
-    }
+
+$paniers = [];
+$total = 0;
+if ($idClient) {
+    $paniers = getPanierFromId($idClient);
 }
-echo '<pre>';
-var_dump($getProduitFromId);
-echo '</pre>';
 ?>
 <!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pâtisserie | Eyce's Croissant</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -65,21 +55,41 @@ echo '</pre>';
 
         <div class="container text-center">
             <?php foreach ($paniers as $panier): ?>
-                <div class="row">
+                <?php
+                $produit = getProduitFromId($panier["id_produit"]);
+                // Ajoutez des vérifications pour éviter les erreurs
+                if (!empty($produit) && isset($produit[0]["designation"]) && isset($produit[0]["prix"])) {
+                    $nomProduit = $produit[0]["designation"];
+                    $prix = $produit[0]["prix"];
+                    $prixUnitaire = $produit[0]["prix"];
+                    $prixTotalProduit = $prixUnitaire * $panier["quantite"];
+                    $total += $prixTotalProduit;
+                } else {
+                    $nomProduit = "Produit inconnu";
+                    $prix = "Prix inconnu";
+                }
+                ?>
+                <div class="row mb-3">
                     <div class="col">
-                        Croissant
+                        <?= $nomProduit ?>
                     </div>
                     <div class="col">
                         <?= $panier["quantite"] ?>
                     </div>
                     <div class="col">
-                        <?= $prix ?>
+                        <?= $prix?>
                     </div>
                     <div class="col">
-                        Supprimer
+                        <form method="POST" action="supprimer-produit.php" style="display:inline;">
+                            <input type="hidden" name="id_produit" value="<?= htmlspecialchars($panier['id_produit'], ENT_QUOTES, 'UTF-8') ?>">
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
                     </div>
                 </div>
             <?php endforeach; ?>
+        </div>
+        <div class="container text-center mt-5">
+            <h3>Total: <?= htmlspecialchars($total, ENT_QUOTES, 'UTF-8') ?> €</h3>
         </div>
     </div>
 </section>
@@ -87,5 +97,6 @@ echo '</pre>';
     <?php include_once("../menu/pied-page.php") ?>
 </div>
 
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

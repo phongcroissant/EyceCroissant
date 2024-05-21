@@ -42,7 +42,7 @@ $produits = getViennoiserie();
                                 Prix : <?= $produit["prix"] ?> €
                             </p>
                             <p>
-                                <a class="btn btn-lg btn-light fs-6"
+                                <a class="btn btn-lg btn-outline-primary fs-6"
                                    href="../pages/addpanier.php?id_produit=<?= $produit["id_produit"] ?>">Ajouter au
                                     panier</a>
                             </p>

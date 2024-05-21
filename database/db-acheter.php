@@ -30,10 +30,24 @@ function getProduitFromId($idProduit): array
 
     return $comptes;
 }
-function supprimerProduitDuPanier($idClient, $idProduit) {
+
+function supprimerProduitDuPanier($idClient, $idProduit)
+{
     $pdo = getConnexion();
-    $requete =  $pdo->prepare("DELETE FROM panier WHERE id_client = ? AND id_produit = ?");
-    $requete->bind_param("ii", $idClient, $idProduit);
+    $requete = $pdo->prepare("DELETE FROM acheter WHERE id_client = $idClient AND id_produit = $idProduit");
     $requete->execute();
-    $requete->close();
+}
+
+function modifierQuantiteProduit($idProduit, int $idClient, int $quantite)
+{
+    $pdo = getConnexion();
+    $requete = $pdo->prepare("UPDATE acheter SET quantite=$quantite WHERE id_produit=$idProduit AND id_client=$idClient");
+    $requete->execute();
+}
+
+function archiverCommande(int $idProduit, int $idClient, $date, int $quantite)
+{
+    $pdo = getConnexion();
+    $requete = $pdo->prepare("INSERT INTO archive VALUES($idProduit,$idClient,$date,$quantite)");
+    $requete->execute();
 }

@@ -23,7 +23,8 @@ if ($idClient) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pâtisserie | Eyce's Croissant</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
@@ -77,26 +78,37 @@ if ($idClient) {
                         <?= $panier["quantite"] ?>
                     </div>
                     <div class="col">
-                        <?= $prix?>
+                        <?= $prix ?>
                     </div>
                     <div class="col">
-                        <form method="POST" action="supprimer-produit.php" style="display:inline;">
-                            <input type="hidden" name="id_produit" value="<?= htmlspecialchars($panier['id_produit'], ENT_QUOTES, 'UTF-8') ?>">
-                            <button type="submit" class="btn btn-danger">Supprimer</button>
-                        </form>
+                        <div class="d-inline-flex">
+                            <p>
+                                <a class="btn btn-lg btn-outline-primary fs-6"
+                                   href="../pages/modifier-produit.php?id_produit=<?= $panier["id_produit"] ?>"><i
+                                            class="bi bi-pen"></i></a>
+                            </p>
+                            <form method="POST" action="supprimer-produit.php" style="display:inline;">
+                                <input type="hidden" name="id_produit" value="<?= $panier['id_produit'] ?>">
+                                <button type="submit" class="btn btn-outline-primary">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </form>
+                        </div>
+
                     </div>
                 </div>
             <?php endforeach; ?>
         </div>
         <div class="container text-center mt-5">
-            <h3>Total: <?= htmlspecialchars($total, ENT_QUOTES, 'UTF-8') ?> €</h3>
+            <h3>Total: <?= $total ?> €</h3>
         </div>
     </div>
+    <div class="my-5 text-center">
+        <button class="mx-auto btn btn-primary" href="../pages/commander.php">
+            Commander
+        </button>
+    </div>
 </section>
-<div class="fixed-bottom">
-    <?php include_once("../menu/pied-page.php") ?>
-</div>
-
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

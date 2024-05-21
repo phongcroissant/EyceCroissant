@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Menu</title>
-</head>
 <footer class="ps-5 pe-5 bg-danger-subtle pt-5 ">
     <div class="row">
         <div class="col-md-12 col-lg-4 col-xl-3 mb-3 mx-auto">

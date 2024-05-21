@@ -57,6 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (empty($password)) {
         $erreurs["password"] = "Veuillez entrer un mot de passe";
     }
+    if (!estSolide($password)) {
+        $erreurs["password"] = "Votre mot de passe doit contenir entre 8 et 14 caratères, doit posséder au moins 1 majuscule, 1 minuscule et 1 chiffre";
+    }
     if ($password != $confirmPassword) {
         $erreurs["confirmpassword"] = "Veuillez saisir le même mot de passe";
     }
@@ -154,7 +157,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                        name="adresse"
                        id="adresse"
                        value="<?= $adresse ?>"
-                       placeholder="Antoine">
+                       placeholder="5 avenue du parc">
                 <?php if (isset($erreurs["adresse"])): ?>
                     <p class="form-text text-danger"><?= $erreurs["adresse"] ?></p>
                 <?php endif; ?>
@@ -179,7 +182,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                        name="villeadresse"
                        id="villeadresse"
                        value="<?= $villeAdresse ?>"
-                       placeholder="Antoine">
+                       placeholder="Besançon">
                 <?php if (isset($erreurs["villeadresse"])): ?>
                     <p class="form-text text-danger"><?= $erreurs["villeadresse"] ?></p>
                 <?php endif; ?>
@@ -194,6 +197,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                        placeholder="Password">
                 <?php if (isset($erreurs["password"])): ?>
                     <p class="form-text text-danger"><?= $erreurs["password"] ?></p>
+                <?php else: ?>
+                    <div id="emailHelp" class="form-text">Votre mot de passe doit contenir entre 8 et 14 caratères, doit
+                        posséder au moins 1 majuscule, 1 minuscule et 1 chiffre
+                    </div>
                 <?php endif; ?>
             </div>
             <div class="mb-3">
